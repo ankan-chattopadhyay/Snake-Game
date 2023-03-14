@@ -131,9 +131,6 @@ def gameloop():
 
             if abs(snake_x - food_x) < 15 and abs(snake_y - food_y) < 15:
                 score += 1
-                '''print("your score is ", score)
-                pygame.mixer.music.load('bite.mp3')
-                pygame.mixer.music.play()'''
                 food_x = random.randint(20, 400)
                 food_y = random.randint(20, 300)
                 snake_length += 1
@@ -151,11 +148,6 @@ def gameloop():
 
             if len(snake_list) > snake_length:
                 del snake_list[0]
-
-            '''if head in snake_list[:-1]:
-                game_over = True
-                pygame.mixer.music.load('gameover.wav')
-                pygame.mixer.music.play()'''
 
             if snake_x < 0 or snake_x > screen_width or snake_y < 0 or snake_y > screen_height:
                 game_over = True
